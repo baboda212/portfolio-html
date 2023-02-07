@@ -10,7 +10,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"> </script> 
     <script type="text/javascript">
         (function(){
-            emailjs.init("user_Kim SunMin");
+            emailjs.init("zQIzIHhxcQkidTaUa");
         })();
     </script>
     
@@ -162,7 +162,7 @@
                             <label for="">이메일주소</label>
                             <input type="email" id="email_id" name="from_name" placeholder="이메일" required>
                             <label for="">내용</label>
-                            <textarea id="message" name="message_html" cols="30" rows="10" placeholder="여기에 글을 작성해주세요" maxlength="500" spellcheck = "false" required></textarea>
+                            <textarea id="message" name="message" cols="30" rows="10" placeholder="여기에 글을 작성해주세요" maxlength="500" spellcheck = "false" required></textarea>
                             <button type="submit" onclick="sendMail()">전송하기</button>
                         </form>
                     </div>
@@ -199,17 +199,18 @@
 
     <!-- email.js -->
     <script> 
-        function sendMail(){
-          var params = {
-              from_name : document.getElementById("from_name").value,
-              to_name: document.getElementById("to_name").value, 
-              message: document.getElementById("message").value
-          };
-
-          emailjs.send("service_b9p0liv", "template_l0zriid", params).then(function (res) {
-              alert("Sucess! " + res.status);
-          })
-      }
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('service_b9p0liv', 'template_l0zriid', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
     </script>
     <!-- <script src="/gradient.js"></script> -->
 
