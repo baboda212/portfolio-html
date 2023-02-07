@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- emailjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"> </script> 
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("baboda212@gmail.com");
+        })();
+    </script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -147,14 +155,15 @@
                 <h1>CONTACT</h1>
                 <div class="contactBox">
                     <div class="contactText">
-                        <form action="" method="post">
+                        <form id="contact-form">
+                            <input type="hidden" name="contact_number">
                             <label for="">이름</label>
-                            <input type="text" id="name" name="name" placeholder="작성자명" required >
+                            <input type="text" id="to_name" name="to_name" placeholder="작성자명" required >
                             <label for="">이메일주소</label>
-                            <input type="email" id="email" name="email" placeholder="이메일" required>
+                            <input type="email" id="email_id" name="from_name" placeholder="이메일" required>
                             <label for="">내용</label>
-                            <textarea id="detailpost" name="detailpost" cols="30" rows="10" placeholder="여기에 글을 작성해주세요" maxlength="500" spellcheck = "false" required></textarea>
-                            <button type="submit">전송하기</button>
+                            <textarea id="message" name="message_html" cols="30" rows="10" placeholder="여기에 글을 작성해주세요" maxlength="500" spellcheck = "false" required></textarea>
+                            <button type="submit" onclick="sendMail()">전송하기</button>
                         </form>
                     </div>
                     <div class="contactEmail">
@@ -187,11 +196,27 @@
         </div><!-- container -->
     </div><!-- wrap -->
 
-    <script src="/index.js"></script>
+
+    <!-- email.js -->
+    <script> 
+        function sendMail(){
+          var params = {
+              from_name : document.getElementById("from_name").value,
+              to_name: document.getElementById("to_name").value, 
+              message: document.getElementById("message").value
+          };
+
+          emailjs.send("service_b9p0liv", "template_l0zriid", params).then(function (res) {
+              alert("Sucess! " + res.status);
+          })
+      }
+    </script>
+    <!-- <script src="/gradient.js"></script> -->
 
     <!-- 폰트어썸 -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"
       crossorigin="anonymous"></script>
+  
 </body>
 </html>

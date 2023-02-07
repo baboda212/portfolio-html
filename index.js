@@ -1,59 +1,58 @@
-/* 배경색상 변하는 효과 */
-var colors = new Array(
-    [254,250,212,0.5],
-    [183,227,228,0.5],
-    [254,250,212,0.5],
-    [183,227,228,0.5]);
+//412Gmail_API: Request had insufficient authentication scopes.
+
+//service_b9p0liv
+//template_l0zriid
+//zQIzIHhxcQkidTaUa
+
+//npm install @emailjs/browser --save
+
+
+
+
+
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+export const Email = () => {
+    const form = useRef();
+    const dispatch = useDispatch();
   
-  var step = 0;
-  //color table indices for: 
-  // current color left
-  // next color left
-  // current color right
-  // next color right
-  var colorIndices = [0,1,2,3];
+    const closeEmail = () => {
+      dispatch({ type: "CLOSE_EMAIL" });
+    };
   
-  //transition speed
-  var gradientSpeed = 0.002;
+    const sendEmail = (e) => {
+      e.preventDefault();
+      emailjs
+        .sendForm(
+          "service_b9p0liv",
+          "template_l0zriid",
+          form.current,
+          "zQIzIHhxcQkidTaUa"
+        )
+        .then(
+          (result) => {
+            alert("전송되었습니다.");
+            closeEmail();
+          },
+          (error) => {
+            alert("전송을 실패했습니다.");
+          }
+        );
+    };
   
-  function updateGradient()
-  {
-    
-    if ( $===undefined ) return;
-    
-  var c0_0 = colors[colorIndices[0]];
-  var c0_1 = colors[colorIndices[1]];
-  var c1_0 = colors[colorIndices[2]];
-  var c1_1 = colors[colorIndices[3]];
-  
-  var istep = 1 - step;
-  var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-  var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-  var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-  var color1 = "rgb("+r1+","+g1+","+b1+")";
-  
-  var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-  var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-  var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-  var color2 = "rgb("+r2+","+g2+","+b2+")";
-  
-   $('.gradient').css({
-     background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
-      background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
-    
-    step += gradientSpeed;
-    if ( step >= 1 )
-    {
-      step %= 1;
-      colorIndices[0] = colorIndices[1];
-      colorIndices[2] = colorIndices[3];
-      
-      //pick two new target color indices
-      //do not pick the same as the current one
-      colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-      colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-      
-    }
-  }
-  
-  setInterval(updateGradient,10);
+    return (
+      <EmailForm ref={form} onSubmit={sendEmail}>
+        <button onClick={closeEmail}> X </button>
+        <label>Name</label>
+        <input type="text" name="from_name" placeholder="이름을 입력해주세요." />
+        <label>Phone</label>
+        <input type="tel" name="phone" placeholder="연락처를 입력해주세요." />
+        <label>Email</label>
+        <input type="email" name="email" placeholder="메일 주소를 입력해주세요" />
+        <label>Message</label>
+        <textarea name="text" />
+        <input type="submit" value="Send" />
+      </EmailForm>
+    );
+    };
