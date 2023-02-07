@@ -1,4 +1,3 @@
-//412Gmail_API: Request had insufficient authentication scopes.
 
 //service_b9p0liv
 //template_l0zriid

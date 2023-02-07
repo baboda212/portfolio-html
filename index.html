@@ -206,8 +206,11 @@
                 emailjs.sendForm('service_b9p0liv', 'template_l0zriid', this)
                     .then(function() {
                         console.log('SUCCESS!');
+                        alert('메일을 보냈습니다.');
+                        location.reload();
                     }, function(error) {
                         console.log('FAILED...', error);
+                        alert('메일보내기를 실패했습니다.')
                     });
             });
         }
