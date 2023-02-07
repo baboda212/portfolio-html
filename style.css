@@ -77,7 +77,7 @@ section{
     font-size: 12px;
 }
 .home .homeText .p2{
-    font-size: 32px;
+    font-size: 30px;
     margin-top: 35px;
 }
 .home .homeText .p2 span{
@@ -87,15 +87,68 @@ section{
     font-size: 100px;
     font-weight: bold;
 }
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #F9F7E8 0%,
+    #FF8B8B 29%,
+    #B7E3E4 67%,
+    #167C80 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 /* home circle배경 */
 .circle1{
     position: absolute;
-    top: 10px;
+    top: -5px;
     left: -10px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    background: rgba(255, 139, 139, 0.5);
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(255, 139, 139, 0.5) 100%);  
+    animation: gradient 4s ease infinite ;
+    opacity: 0.5;
+}
+@keyframes gradient {
+    0%{  
+        transition: opacity 2s linear;
+        opacity: 0.5; 
+    }
+    25%{  
+        transition: opacity 2s linear;
+        opacity: 0.8; 
+    }
+    50%{  
+        transition: opacity 3s linear;
+        opacity: 1; 
+    }
+    75%{  
+        transition: opacity 3s linear;
+        opacity: 0.8; 
+    }
+    100%{
+        transition: opacity 2s linear;
+        opacity: 0.5; 
+    }  
 }
 .circle2{
     position: absolute;
@@ -105,6 +158,30 @@ section{
     height: 100px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(22, 124, 128, 0.4) 100%);
+    opacity: 0.5;
+    animation: gradient1 5s ease infinite ;
+}
+@keyframes gradient1 {
+    0%{  
+        transition: opacity 3s linear;
+        opacity: 0.5; 
+    }
+    25%{  
+        transition: opacity 3s linear;
+        opacity: 0.8; 
+    }
+    50%{  
+        transition: opacity 4s linear;
+        opacity: 1; 
+    }
+    75%{  
+        transition: opacity 4s linear;
+        opacity: 0.8; 
+    }
+    100%{
+        transition: opacity 3s linear;
+        opacity: 0.5; 
+    }  
 }
 .circle3{
     position: absolute;
@@ -114,6 +191,30 @@ section{
     height: 200px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(183, 227, 228, 0.5) 65.1%);
+    opacity: 0.5;
+    animation: gradient2 3s ease infinite ;
+}
+@keyframes gradient2 {
+    0%{  
+        transition: opacity 2s linear;
+        opacity: 0.5; 
+    }
+    25%{  
+        transition: opacity 2s linear;
+        opacity: 0.8; 
+    }
+    50%{  
+        transition: opacity 3s linear;
+        opacity: 1; 
+    }
+    75%{  
+        transition: opacity 3s linear;
+        opacity: 0.8; 
+    }
+    100%{
+        transition: opacity 2s linear;
+        opacity: 0.5; 
+    }  
 }
 .circle4{
     position: absolute;
@@ -123,6 +224,8 @@ section{
     height: 100px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(183, 227, 228, 0.5) 65.1%);
+    opacity: 0.5;
+    animation: gradient2 3s ease infinite ;
 }
 .circle5{
     position: absolute;
@@ -132,6 +235,8 @@ section{
     height: 150px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(183, 227, 228, 0.5) 65.1%);
+    animation: gradient 4s ease infinite ;
+    opacity: 0.5;
 }
 .circle6{
     position: absolute;
@@ -141,6 +246,8 @@ section{
     height: 200px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(22, 124, 128, 0.4) 100%);
+    opacity: 0.5;
+    animation: gradient2 3s ease infinite ;
 }
 .circle7{
     position: absolute;
@@ -150,6 +257,8 @@ section{
     height: 100px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(255, 139, 139, 0.5) 100%);  
+    opacity: 0.5;
+    animation: gradient2 3s ease infinite ;
 }
 .circle8{
     position: absolute;
@@ -159,6 +268,8 @@ section{
     height: 200px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(22, 124, 128, 0.4) 100%);
+    opacity: 0.5;
+    animation: gradient2 3s ease infinite ;
 }
 .circle9{
     position: absolute;
@@ -168,6 +279,8 @@ section{
     height: 100px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(183, 227, 228, 0.5) 65.1%);
+    opacity: 0.5;
+    animation: gradient2 3s ease infinite ;
 }
 .circle10{
     position: absolute;
@@ -177,6 +290,8 @@ section{
     height: 150px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(22, 124, 128, 0.4) 100%);
+    animation: gradient 4s ease infinite ;
+    opacity: 0.5;
 }
 .circle11{
     position: absolute;
@@ -186,6 +301,8 @@ section{
     height: 200px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(255, 139, 139, 0.5) 100%);  
+    opacity: 0.5;
+    animation: gradient2 3s ease infinite ;
 }
 .circle12{
     position: absolute;
@@ -195,6 +312,8 @@ section{
     height: 150px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(254, 250, 212, 0.5) 0%, rgba(255, 139, 139, 0.5) 100%);  
+    animation: gradient 4s ease infinite ;
+    opacity: 0.5;
 }
 
 /* about me */
@@ -217,7 +336,35 @@ section{
     height: 276px;
     border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* animation: gradient 4s ease infinite; */
 }
+/* @keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+.ping {
+	-webkit-animation: ping 4s ease-in-out ;
+}
+ @-webkit-keyframes ping {
+    0% {
+      -webkit-transform: scale(0.2);
+              transform: scale(0.2);
+      opacity: 0.2;
+    }
+    100% {
+      -webkit-transform: scale(1.0);
+              transform: scale(1.0);
+      opacity: 1;
+    }
+  }
 .about .myInfo .experience{
     background: linear-gradient(180deg, #FEFAD4 0%, #FF8B8B 100%);
     position: relative;
@@ -298,6 +445,25 @@ section{
     border-radius: 15px;
     text-align: center;
 }
+.works .project .projectText a:hover{
+    color: #B7E3E4;
+    background-color: transparent;
+    border: 1px solid #B7E3E4;
+}
+.works .project .projectText a:nth-child(2){
+    color: #FF8B8B;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #FF8B8B;
+    border-radius: 15px;
+    text-align: center;
+}
+.works .project .projectText a:nth-child(2):hover{
+    color: #fff;
+    background-color: #B7E3E4;
+    border: 1px solid #B7E3E4;
+}
 .works .project .projectText .button{
     display: flex;
     justify-content: space-evenly;
@@ -343,6 +509,11 @@ section{
     text-align: center;
     align-self: center;
     margin-top: 30px;
+}
+.contact .contactText form button:hover{
+    color: #FF8B8B;
+    background-color: transparent;
+    border: 1px solid #FF8B8B;
 }
 .contact .contactBox .contactEmail{
     display: flex;
