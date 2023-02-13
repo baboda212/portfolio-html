@@ -411,6 +411,7 @@ section{
     width: 100%;
     height: 100%;
 }
+
 /* works */
 .works{
     width: 100%;
@@ -439,6 +440,9 @@ section{
 .works .project .projectText .p3{
     font-size: 20px;
     margin-bottom: 20px;
+}
+.works .project .projectText .p3:nth-child(4){
+    font-weight: bold;
 }
 .works .project .projectText h2{
     margin-bottom: 20px;
@@ -475,6 +479,8 @@ section{
     justify-content: space-evenly;
     align-items: center;
 }
+
+
 .contact{
     width: 100%;
     padding: 40px;
@@ -659,7 +665,7 @@ footer .footer__copyright{
     }
     .about .myInfo{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-bottom: 50px;
     }
     .about .myInfo div{
@@ -682,7 +688,7 @@ footer .footer__copyright{
     }
     .about .myInfo .experience h1{
         position: absolute;
-        font-size: 18px;
+        font-size: 16px;
         top: 40%;
         left: 5%;
         color: #fff;
@@ -698,7 +704,7 @@ footer .footer__copyright{
     }
     .about .myInfo .ability h1{
         position: absolute;
-        font-size: 18px;
+        font-size: 16px;
         top: 40%;
         left: 25%;
         color: #fff;
@@ -708,6 +714,8 @@ footer .footer__copyright{
         display: flex;
         justify-content: space-around;
         padding: 10px;
+        background: transparent;
+        border: none;
     }
     .about .skills img{
         width: 36px;
@@ -730,14 +738,19 @@ footer .footer__copyright{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 10px;
     }
     .works .project .projectText{
        width: 100%;
        margin: 0 auto;
+       /* outline: 1px solid red; */
     }
     .works .project .projectText .p3{
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 20px;
+    }
+    .works .project .projectText .p3:nth-child(4){
+        font-weight: bold;
     }
     .works .project .projectText h2{
         margin-bottom: 16px;
@@ -754,7 +767,7 @@ footer .footer__copyright{
     }
     .works .project .projectText .button{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
     }
     .works .project .projectImg img{
