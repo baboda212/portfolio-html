@@ -5,7 +5,7 @@
 
 //npm install @emailjs/browser --save
 
-
+//react로 변경시 이메일 코드 아래로 수정요망
 
 
 
