@@ -33,7 +33,7 @@
  
 ### 사용 언어 및 라이브러리 
 HTML, CSS, Javascript, email.js
-* file
+#### file
  * index.js : email.js를 react로 구현 시 산입예정
  * gradient.js : 효과에 사용예정이었으나, 구현 시 오류발생하여 일시 보류
  * Helvetica-Font : 폰트파일
