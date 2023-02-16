@@ -1,7 +1,6 @@
 # 개인포트폴리오페이지
 ### 사이트주소 
-피그마 시안주소 :https://www.figma.com/file/Lx4fDLcGyTXNqOJhN5MpWf/Untitled?node
-id=224%3A2&t=KhmO6RSdlnKsDMjd 1
+피그마 시안주소 :https://www.figma.com/file/Lx4fDLcGyTXNqOJhN5MpWf/Untitled?node-id=224%3A2&t=KhmO6RSdlnKsDMjd-1
 
 깃 허브 주소 : https://github.com/baboda212/portfolio-html.git
 
