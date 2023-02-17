@@ -11,6 +11,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Helvetica', Arial;
     color: #167C80;
