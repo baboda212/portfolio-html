@@ -979,7 +979,7 @@ footer .footer__copyright{
         position: absolute;
         font-size: 20px;
         top: 40%;
-        left: 5%;
+        /* left: 10%; */
         color: #fff;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
@@ -987,7 +987,7 @@ footer .footer__copyright{
         position: absolute;
         font-size: 16px;
         top: 42%;
-        left: 3%;
+        /* left: 10%; */
         color: #fff;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
@@ -995,7 +995,7 @@ footer .footer__copyright{
         position: absolute;
         font-size: 22px;
         top: 40%;
-        left: 25%;
+        /* left: 25%; */
         color: #fff;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
