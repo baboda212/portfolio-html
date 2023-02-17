@@ -977,7 +977,7 @@ footer .footer__copyright{
     }
     .about .myInfo .experience h1{
         position: absolute;
-        font-size: 22px;
+        font-size: 20px;
         top: 40%;
         left: 5%;
         color: #fff;
@@ -985,7 +985,7 @@ footer .footer__copyright{
     }
     .about .myInfo .responsibility h1{
         position: absolute;
-        font-size: 19px;
+        font-size: 16px;
         top: 42%;
         left: 3%;
         color: #fff;
@@ -1029,9 +1029,11 @@ footer .footer__copyright{
     .works .project .projectText{
        width: 100%;
        margin: 0 auto;
+       /* outline: 1px solid red; */
+       padding-top: 10px;
     }
     .works .project .projectText .p3{
-        font-size: 12px;
+        font-size: 16px;
         margin-bottom: 20px;
     }
     .works .project .projectText h2{
