@@ -589,6 +589,9 @@ footer .footer__copyright{
 }
 
 @media (max-width:375px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .container{
         width: 100%;
         background-color: #F9F7E8;
@@ -872,6 +875,9 @@ footer .footer__copyright{
 }
 
 @media (max-width:757px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .container{
         width: 100%;
         background-color: #F9F7E8;
