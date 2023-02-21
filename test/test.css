@@ -348,17 +348,6 @@ section{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     /* animation: gradient 4s ease infinite; */
 }
-/* @keyframes gradient {
-    0%{
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-} */
 
 .ping {
 	-webkit-animation: ping 4s ease-in-out ;
