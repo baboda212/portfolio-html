@@ -391,7 +391,7 @@ section{
 }
 
 .ping {
-	-webkit-animation: ping 4s ease-in-out;
+	-webkit-animation: ping 3s ease-in-out;
 }
  @-webkit-keyframes ping {
     0% {
